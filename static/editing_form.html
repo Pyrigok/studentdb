@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Сервіс Обліку Студентів</title>
+	<!-- Include Styles -->
+	<link rel="stylesheet" href="http://cdn.jsdelivr.net/bootstrap/3.3.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/main.css">
+
+</head>
+<body>
+	<div class="container">
+		<h1>Форма редагування Студента</h1>
+		
+		<!-- Start Form -->
+		<form class="form-horisontal" action="">
+
+			<!-- Name -->
+			<div class="form-group">
+				<label for="student_name" class="col-sm-3 control-label" id="student_label">Ім'я</label>
+					<div class="col-sm-9">
+						<input type="text" class="form-control" id='student_name'>
+					</div>
+			</div>
+			<!-- End Name -->
+
+			<div class="form-group">
+				<label for="student_surname" class="col-sm-3 control-label" id="student_label">По-батькові</label>
+				<div class="col-sm-9">
+					<input type="text" class="form-control" id="student_surname">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="student_lastname" class="col-sm-3" id='student_label'>Прізвище</label>
+
+				<div class="col-sm-9">
+					<input type="text" class="form-control" id="student_lastname">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="ticket_number" class="col-sm-3" id="student_label">№ Білету</label>
+				<div class="col-sm-9">
+					<input type="text" class="form-control" id="ticket_number">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="born_data" class="col-sm-3" id="student_label">Дата народження</label>
+				<div class="col-sm-9">
+					<input type="text" class="form-control" id="born_data">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="student_foto" class="col-sm-3" id="student_label">Фото</label>
+				<div class="col-sm-9">
+					<label for="">Наразі:</label>				
+					<img src="img/Khrs.jpg" alt="">
+					<label for=""><input type="checkbox">Очистити</label>
+
+					<div>
+						<label for="">Змінити</label>
+						<input type="submit" value="Chose file" id="chose">
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="student_group" class="col-sm-3 " id="group_label">Група</label>
+
+				<div>
+					<select class="col-sm-9" id="student_group">
+						<option value="">МтС-31</option>
+						<option value="">МтС-32</option>
+						<option value="">МтМ-41</option>
+					</select>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label for="note" class="col-sm-3" id='student_label'>Додаткові нотатки</label>
+				
+				<div>
+					<textarea name="additional_note" id="note" cols="30" rows="10"></textarea>
+				</div>
+			</div>
+
+
+
+			<div class="">
+				<div class="col-sm-3"></div>
+				<div class="col-sm-9">
+					<button class="btn btn-primary">Зберегти</button>
+					<button class="btn">Скасувати</button>
+				</div>
+			</div>
+		</form>
+		<!-- End Form -->
+
+	</div>
+	
+</body>
+</html>
