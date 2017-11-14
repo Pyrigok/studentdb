@@ -10,7 +10,7 @@ def students_list (request):
 			'last_name': u'Пиріг',
 			'ticket': 235,
 			'image': 'img/Khrs.jpg'},
-			
+
 			{'id': 2,
 			'first_name': u'Пиріг',
 			'last_name': u'Христинка',
@@ -32,7 +32,15 @@ def students_delete (request, sid):
 # Views for Groups
 
 def groups_list (request):
-	return HttpResponse ('<h1>groups_list</h1>')
+	groups = (
+		{'id': 1,
+		'name': u'МтС-31',
+		'leader': u'Христина Бочкай'},
+		{'id': 2,
+		'name': u'МтС-32',
+		'leader': u'Ігор Залізний'}
+		)
+	return render (request, 'students/groups_list.html', {'groups': groups})
 
 def groups_add (request):
 	return HttpResponse ('<h1>Group add form </h1>')

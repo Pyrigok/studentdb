@@ -1,0 +1,54 @@
+/*Global Styles*/
+h1, h2, h3, h4, h5 ,h6 {
+	font-weight: bold;
+}
+
+.alert {
+	/* Відстань зверху елемента: -top */
+	margin-top: 10px;
+}
+
+#footer {
+	/* верхня межа елемента: ширина лінії, тип лінії, колір */
+	border-top: 1px solid #dddddd;
+
+	/* внутрішня відстань елемента до верхнього краю */
+	padding-top: 10px;
+}
+
+/* Group Selector */
+#group-selector select {
+
+	width: 85%;
+	background-color: #ffffff;
+	border: 1px solid #cccccc;
+	height: 30px;
+	line-height: 30px;
+	color: #555555;
+}
+
+table {
+	
+}
+
+#student_label {
+	text-align: right;
+	margin-top: 17px
+}
+
+#group_label {
+	text-align: right;
+}
+
+img {
+	width: 50px;
+	height: 50px;
+}
+
+div {
+	margin-top: 10px
+}
+
+#chose {
+	border-radius: 45%
+}
