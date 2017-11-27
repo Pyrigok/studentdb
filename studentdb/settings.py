@@ -43,12 +43,12 @@ INSTALLED_APPS = [
     'students',
 ]
 
-MIDDLEWARE = [
+MIDDLEWARE_CLASSES = [
+	'django.contrib.sessions.middleware.SessionMiddleware',
+	'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
@@ -126,3 +126,6 @@ STATIC_URL = '/static/'
 TEMPLATE_CONTEXT_PROCESSORS = global_settings.TEMPLATE_CONTEXT_PROCESSORS + (
                             "django.core.context_processors.request",
                             "studentsdb.context_processors.students_proc",)
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join (BASE_DIR, '..', 'media')

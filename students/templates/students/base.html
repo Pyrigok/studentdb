@@ -25,7 +25,7 @@
 
 			<!-- Logo -->
 			<div class='col-xs-8'>
-				<h1>Сервіс обліку студентів</h1>
+				<h1>Сервіс обліку студентів {% block Logo %}{% endblock Logo %}</h1>
 			</div>
 		
 			<!-- Groups Selector -->
@@ -85,11 +85,14 @@
 		<!-- End Main Page Content -->		
 
 		<!-- Start Footer -->
+		
 		<div class='row' id='footer'>
 			<div class='col-xs-12'>
 				&copy; 2017 Сервіс обліку студентів
+				{% block Footer %}{% endblock Footer %}
 			</div>
 		</div>
+
 		<!-- End Footer -->		
 	
 	</div>

@@ -1,0 +1,167 @@
+{% extends 'students/base.html' %}
+
+{% load static from staticfiles %}
+
+{% block meta_title %}Облік відвідування{% endblock meta_title %}
+
+{% block Logo %}{% endblock Logo %}
+
+{% block title %}Облік відвідування{% endblock title %}
+
+{% block content %}
+
+	<div>
+		<nav>
+			<ul class="pager">
+				<li><a href="#">&larr;</a></li>
+				<li>Листопад 2017</li>
+				<li><a href="#">&rarr;</a></li>
+			</ul>
+		</nav>
+	</div>
+
+	<table class="table table-striped table-hover table-bordered" id='visiting'>
+		<thead>
+			<tr>
+				<th><br>#</th>
+				<th><br> Студент</th>
+				<th>Ср <br>1</th>
+				<th>Чт <br>2</th>
+				<th>Пт <br>3</th>
+				<th>Сб <br>4</th>
+				<th>Нд <br>5</th>
+				<th>Пн <br>6</th>
+				<th>Вт <br>7</th>
+				<th>Ср <br>8</th>
+				<th>Чт <br>9</th>
+				<th>Пт <br>10</th>
+				<th>Сб <br>11</th>
+				<th>Нд <br>12</th>
+				<th>Пн <br>13</th>
+				<th>Вт <br>14</th>
+				<th>Ср <br>15</th>
+				<th>Чт <br>16</th>
+				<th>Пт <br>17</th>
+				<th>Сб <br>18</th>
+				<th>Нд <br>19</th>
+				<th>Пн <br>20</th>
+				<th>Вт <br>21</th>
+				<th>Ср <br>22</th>
+				<th>Чт <br>23</th>
+				<th>Пт <br>24</th>
+				<th>Сб <br>25</th>
+				<th>Нд <br>26</th>
+				<th>Пн <br>27</th>
+				<th>Вт <br>28</th>
+				<th>Ср <br>29</th>
+				<th>Чт <br>30</th>
+				<th>Пт <br>31</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for entry in journal %}
+				<tr>
+					<td>{{ forloop.counter }}</td>
+					<td>
+						<a href="{% url 'journal' entry.id %}">{{ entry.name }}</a>
+					</td>
+					<td>
+						<input type="checkbox">
+					</td>
+							<td>
+								<input type="checkbox">
+							</td>
+							<td>
+								<input type="checkbox">
+							</td>
+							<td>
+								<input type="checkbox">
+							</td>
+							<td>
+								<input type="checkbox">
+							</td>
+							<td>
+								<input type="checkbox">
+							</td>
+							<td>
+								<input type="checkbox">
+							</td>
+							<td>
+								<input type="checkbox">
+							</td>
+							<td>
+								<input type="checkbox">
+							</td>
+							<td>
+								<input type="checkbox">
+							</td>
+							<td>
+								<input type="checkbox">
+							</td>
+							<td>
+								<input type="checkbox">
+							</td>
+							<td>
+								<input type="checkbox">
+							</td>
+							<td>
+								<input type="checkbox">
+							</td>
+							<td>
+								<input type="checkbox">
+							</td>
+							<td>
+								<input type="checkbox">
+							</td>
+							<td>
+								<input type="checkbox">
+							</td>
+							<td>
+								<input type="checkbox">
+							</td>
+							<td>
+								<input type="checkbox">
+							</td>
+							<td>
+								<input type="checkbox">
+							</td>
+							<td>
+								<input type="checkbox">
+							</td>
+							<td>
+								<input type="checkbox">
+							</td>
+							<td>
+								<input type="checkbox">
+							</td>
+							<td>
+								<input type="checkbox">
+							</td>
+							<td>
+								<input type="checkbox">
+							</td>
+							<td>
+								<input type="checkbox">
+							</td>
+							<td>
+								<input type="checkbox">
+							</td>
+							<td>
+								<input type="checkbox">
+							</td>
+							<td>
+								<input type="checkbox">
+							</td>
+							<td>
+								<input type="checkbox">
+							</td>
+							<td>
+								<input type="checkbox">
+							</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+{% endblock content %}
+{% block Footer %}{% endblock Footer %}
