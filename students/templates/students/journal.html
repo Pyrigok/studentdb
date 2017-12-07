@@ -63,7 +63,9 @@
 				<tr>
 					<td>{{ forloop.counter }}</td>
 					<td>
-						<a href="{% url 'journal' entry.id %}">{{ entry.name }}</a>
+						<a href="#">
+							{{ entry.student_name }}
+						</a>
 					</td>
 					<td>
 						<input type="checkbox">
@@ -162,6 +164,27 @@
 			{% endfor %}
 		</tbody>
 	</table>
+
+{% if journal.has_other_pages %}
+	{% with order_by=request.GET.order_by reverse=request.GET.reverse %}
+		<nav>
+			<ul class="pagination">
+		    	<li>
+		      		<a href="{% url 'journal' %}?page=1&amp;order_by={{ order_by }}&amp;reverse={{ reverse }}">&laquo;</a>
+			    </li>
+			    {% for p in journal.paginator.page_range %}
+				    <li {% if journal.number == p %}class="active"{% endif %}>
+			    	    <a href="{% url 'journal' %}?page={{ p }}&amp;order_by={{ order_by }}&amp;reverse={{ reverse }}">{{ p }}</a>
+				    </li>
+			    {% endfor %}
+		    	<li>
+			      <a href="{% url 'journal' %}?page={{ journal.paginator.num_pages }}&amp;order_by={{ order_by }}&amp;reverse={{ reverse }}">
+			        &raquo;</a>
+				</li>
+			</ul>
+		</nav>
+	{% endwith %}
+{% endif %}
 
 {% endblock content %}
 {% block Footer %}{% endblock Footer %}

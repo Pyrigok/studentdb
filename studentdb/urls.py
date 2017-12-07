@@ -32,7 +32,10 @@ urlpatterns = patterns ('',
 	url (r'^groups/(?P<gid>\d+)/delete/$', 'students.views.groups_list.groups_delete', name = 'groups_delete'),
 
 	# Journals urls
-	url (r'^journal/$', 'students.views.journal_.journal', name = 'journal'),
+	url (r'^journal/$', 'students.views.st_journal.journal', name = 'journal'),
+
+	# Exams urls
+	url (r'^exam/$', 'students.views.st_exam.exam', name = 'exam'),
 
     url (r'^admin/', admin.site.urls),
 )

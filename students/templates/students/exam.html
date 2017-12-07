@@ -1,0 +1,56 @@
+{% extends 'students/base.html' %}
+
+{% load static from staticfiles %}
+
+{% block meta_title %}Список екзаменів{% endblock meta_title %}
+
+{% block Logo %}{% endblock Logo %}
+
+{% block title %}Список екзаменів{% endblock title %}
+
+{% block content %}
+
+<table class="table " >
+	<thead>
+		<tr>
+			<th>#</th>
+
+			<th>Назва екзамену</th>
+
+			<th>Група</th>
+
+			<th>Дата проведення</th>
+
+			<th>Екзаменатор</th>
+		</tr>
+	</thead>
+	<tbody>
+	{% for entry in exam %}
+		<tr>
+			<td>
+				{{forloop.counter}}
+			</td>
+
+			<td>
+				{{ entry.subject }}
+			</td>
+
+			<td>
+				{{ entry.exam_of_group }}
+			</td>
+
+			<td>
+				{{ entry.time }}
+			</td>
+
+			<td>
+				{{ entry.teacher_name }}
+			</td>
+		</tr>
+	{% endfor %}
+	</tbody>
+</table>
+
+
+{% endblock content %}
+{% block Footer %}{% endblock Footer %}
