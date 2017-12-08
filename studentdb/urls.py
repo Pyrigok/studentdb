@@ -37,6 +37,10 @@ urlpatterns = patterns ('',
 	# Exams urls
 	url (r'^exam/$', 'students.views.st_exam.exam', name = 'exam'),
 
+	# Contact admin form
+	url (r'^contact-admin/$', 'students.views.contact_admin.contact_admin',
+		name='contact_admin'),
+
     url (r'^admin/', admin.site.urls),
 )
 

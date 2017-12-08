@@ -30,6 +30,17 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# email settings
+#EMAIL_BACKEND = 'django_smtp_ssl.SSLEmailBackend'
+ADMIN_EMAIL = 'pyrigok@ukr.net'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = '465'
+EMAIL_HOST_USER = 'pyrigechok'
+EMAIL_HOST_PASSWORD = '1592648732648qqq'
+#DEFAULT_EMAIL_FROM = 'pyrigechok@gmail.com'
+EMAIL_USE_TLS = False  
+EMAIL_USE_SSL = True
+
 
 # Application definition
 
@@ -41,6 +52,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'students',
+    'crispy_forms',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -54,6 +66,8 @@ MIDDLEWARE_CLASSES = [
 ]
 
 ROOT_URLCONF = 'studentdb.urls'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
 TEMPLATES = [
     {

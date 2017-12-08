@@ -76,10 +76,10 @@
 		<div class="form-group {% if errors.ticket %}has-error{% endif %}">
 			<label for="ticket" class="col-sm-2 control-label">Квиток*</label>
 			<div class="col-sm-10">
-				
+				<span class="help-block">
 				<input type="text" value="{{ request.POST.ticket }}" name="ticket" id="ticket"
 					class="form-control" placeholder="Введіть номер квитка">
-				<span class="help-block">{{ errors.ticket }}</span>
+				{{ errors.ticket }}</span>
 			</div>
 		</div>
 

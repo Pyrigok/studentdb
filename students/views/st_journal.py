@@ -8,7 +8,7 @@ def journal (request):
 	journal = Journal.objects.all()
 
 	# paginate students
-	paginator = Paginator(journal, 9)
+	paginator = Paginator(journal, 11)
 	page = request.GET.get('page')
 
 	try:

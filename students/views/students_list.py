@@ -119,9 +119,7 @@ def students_add (request):
 				# render form with errors and previous user input
 				return render(request, 'students/students_add.html',
 							{'groups': Group.objects.all().order_by('title'), 'errors': errors})
-
-
-
+				
 		elif request.POST.get('cancel_button') is not None:
 
 			# redirect to home page on cancel button

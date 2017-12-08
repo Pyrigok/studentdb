@@ -14,10 +14,5 @@ class Journal (models.Model):
 		null = True,
 		on_delete = models.PROTECT)
 
-	data = models.DateField (
-		blank = False,
-		null = True,
-		verbose_name = u'Дата')
-
 	def __str__ (self):
-		return u'%s %s' % (self.student_name, self.data)
+		return u'%s %s' % (self.student_name)
